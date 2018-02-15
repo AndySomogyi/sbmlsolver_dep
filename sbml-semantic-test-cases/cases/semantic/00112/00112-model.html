@@ -1,0 +1,30 @@
+<p>
+The model contains two compartments named compartment and compartment1.
+There are two species named S1 and S3 and two parameters named k1 and k2.
+Compartment "compartment" contains species S1.  Compartment "compartment1"
+contains species S3.</p>
+<p>The model contains:</p><ul>
+<li class="u">2 species (S1, S3)</li>
+<li class="u">2 parameters (k1, k2)</li>
+<li class="u">2 compartments (compartment, compartment1)</li></ul>
+<p>There are 2 reactions:</p>
+<table style="width:30em;margin: 1em auto;"><tr><td style="text-align:center;">  <strong>Reaction</strong>  </td><td style="text-align:center;">  <strong>Rate</strong>  </td></tr>
+<tr><td style="text-align:center;"> reaction1: S1 &#8594; S3 </td><td style="text-align:center;"> <dfn>compartment &#183; multiply(k1, S1)</dfn> </td></tr>
+<tr><td style="text-align:center;"> reaction2: S3 &#8594; S1 </td><td style="text-align:center;"> <dfn>compartment1 &#183; k2 &#183; (S3 + &#8722;1 &#183; S1)</dfn> </td></tr></table>
+<p>The reactions occur between the species within different compartments:</p>
+<p>The model contains the following function definition:</p>
+<table style="width:30em;margin: 1em auto;"><tr><td style="text-align:center;">  <strong>Id</strong>  </td><td style="text-align:center;">  <strong>Arguments</strong>  </td><td style="text-align:center;">  <strong>Formula</strong>  </td></tr>
+<tr><td style="text-align:center;"> multiply </td><td style="text-align:center;"> x, y </td><td style="text-align:center;"> <dfn>x &#183; y</dfn> </td><td style="text-align:left;"><p>
+]
+The initial conditions are as follows:</p>
+<table style="width:35em;margin: 1em auto;"><tr><td>       </td><td style="text-align:center;"> <strong>Value</strong> </td><td style="text-align:center;"> <strong>Constant</strong> </td></tr>
+<tr><td style="text-align:center;"> Initial amount of species S1 </td><td style="text-align:center;"> <dfn>1</dfn> </td><td style="text-align:center;"> variable </td></tr>
+<tr><td style="text-align:center;"> Initial amount of species S3 </td><td style="text-align:center;"> <dfn>0</dfn> </td><td style="text-align:center;"> variable </td></tr>
+<tr><td style="text-align:center;"> Initial value of parameter k1 </td><td style="text-align:center;"> <dfn>0.75</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial value of parameter k2 </td><td style="text-align:center;"> <dfn>0.25</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial volume of compartment 'compartment' </td><td style="text-align:center;"> <dfn>1</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial volume of compartment 'compartment1' </td><td style="text-align:center;"> <dfn>1</dfn> </td><td style="text-align:center;"> constant </td></tr></table>
+<p>The species' initial quantities are given in terms of substance units to
+make it easier to use the model in a discrete stochastic simulator, but
+their symbols represent their values in concentration units where they
+appear in expressions.</p>

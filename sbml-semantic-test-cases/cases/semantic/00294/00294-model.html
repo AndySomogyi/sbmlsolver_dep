@@ -1,0 +1,35 @@
+<p>
+The model contains two compartments named compartment and compartment1.
+There are three species named S1, S3 and S5 and three parameters named k1,
+k2 and k4.  Compartment "compartment" contains species S1.  Compartment
+"compartment1" contains species S3 and S5.</p>
+<p>The model contains:</p><ul>
+<li class="u">3 species (S1, S3, S5)</li>
+<li class="u">3 parameters (k1, k2, k4)</li>
+<li class="u">2 compartments (compartment, compartment1)</li></ul>
+<p>There are 2 reactions:</p>
+<table style="width:30em;margin: 1em auto;"><tr><td style="text-align:center;">  <strong>Reaction</strong>  </td><td style="text-align:center;">  <strong>Rate</strong>  </td></tr>
+<tr><td style="text-align:center;"> reaction1: S1 &#8594; S3 </td><td style="text-align:center;"> <dfn>compartment &#183; k1 &#183; S1</dfn> </td></tr>
+<tr><td style="text-align:center;"> reaction2: S3 &#8594; S1 </td><td style="text-align:center;"> <dfn>compartment1 &#183; k2 &#183; (S3 + &#8722;1 &#183; S1)</dfn> </td></tr></table>
+<p>Both reactions occur between species within different compartments.</p>
+<p>The model contains one rule which assigns value to species S5:</p>
+<table style="width:30em;margin: 1em auto;"><tr><td style="text-align:center;">  <strong>Type</strong>  </td><td style="text-align:center;">  <strong>Variable</strong>  </td><td style="text-align:center;">  <strong>Formula</strong>  </td></tr>
+<tr><td style="text-align:center;"> Assignment </td><td style="text-align:center;"> S5 </td><td style="text-align:center;"> <dfn>k4 &#183; S3</dfn> </td></tr></table>
+<p>In this case there is no initial value declared for species S3 and thus it
+must be calculated by the assignmentRule.  Note that since this
+assignmentRule must always remain true, it should be considered during
+simulation.</p>
+<p>The initial conditions are as follows:</p>
+<table style="width:35em;margin: 1em auto;"><tr><td style="text-align:center;">       </td><td style="text-align:center;"> <strong>Value</strong> </td><td style="text-align:center;"> <strong>Constant</strong> </td></tr>
+<tr><td style="text-align:center;"> Initial amount of species S1 </td><td style="text-align:center;"> <dfn>1</dfn> </td><td style="text-align:center;"> variable </td></tr>
+<tr><td style="text-align:center;"> Initial amount of species S3 </td><td style="text-align:center;"> <dfn>0</dfn> </td><td style="text-align:center;"> variable </td></tr>
+<tr><td style="text-align:center;"> Initial concentration of species S5 </td><td style="text-align:center;"> <dfn>k4 &#183; S3</dfn> </td><td style="text-align:center;"> variable </td></tr>
+<tr><td style="text-align:center;"> Initial value of parameter k1 </td><td style="text-align:center;"> <dfn>0.75</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial value of parameter k2 </td><td style="text-align:center;"> <dfn>0.25</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial value of parameter k4 </td><td style="text-align:center;"> <dfn>0.5</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial volume of compartment 'compartment' </td><td style="text-align:center;"> <dfn>1</dfn> </td><td style="text-align:center;"> constant </td></tr>
+<tr><td style="text-align:center;"> Initial volume of compartment 'compartment1' </td><td style="text-align:center;"> <dfn>1</dfn> </td><td style="text-align:center;"> constant </td></tr></table>
+<p>The species' initial quantities are given in terms of substance units to
+make it easier to use the model in a discrete stochastic simulator, but
+their symbols represent their values in concentration units where they
+appear in expressions.</p>
