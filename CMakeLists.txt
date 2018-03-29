@@ -205,3 +205,8 @@ if(WIN32)
     install(FILES ${libxml_headers} DESTINATION include/libxml2/libxml COMPONENT rr_core)
     install (FILES  ${THIRD_PARTY_FOLDER}/dependencies/libsbml/lib/libxml2.lib DESTINATION lib COMPONENT rr_core)
 endif()
+
+#install test suite
+install (DIRECTORY
+            ${THIRD_PARTY_FOLDER}/sbml-semantic-test-cases
+            DESTINATION testing)
