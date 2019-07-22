@@ -3,7 +3,7 @@
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
-/* @(#) $Id: zconf.h 962 2012-09-26 01:07:31Z tottek $ */
+/* @(#) $Id$ */
 
 #ifndef ZCONF_H
 #define ZCONF_H
@@ -284,7 +284,7 @@ typedef uLong FAR uLongf;
    typedef Byte       *voidp;
 #endif
 
-#ifdef HAV_UNISTD_H           /* HAVE_UNISTD_H -- this line is updated by ./configure */
+#if 0           /* HAVE_UNISTD_H -- this line is updated by ./configure */
 #  include <sys/types.h> /* for off_t */
 #  include <unistd.h>    /* for SEEK_* and off_t */
 #  ifdef VMS
